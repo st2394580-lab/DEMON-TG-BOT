@@ -1,27 +1,41 @@
-const config = require("../config");
+# 🤖 DEMON-TG-BOT
 
-function setupAutoReply(bot) {
-  if (!config.AUTO_REPLY) return;
+A modular Telegram bot built with Node.js and Telegraf.
 
-  bot.on("text", async (ctx) => {
-    const text = ctx.message.text.toLowerCase().trim();
+## Features
 
-    if (text === "good morning") {
-      return ctx.reply("🌅 Good morning!");
-    }
+- Auto reply
+- Start / Help / Menu
+- Ping / Alive / Info
+- User ID
+- Group information
+- Ban / Unban
+- Mute / Unmute
+- Fun commands
+- Modular command loader
 
-    if (text === "good night") {
-      return ctx.reply("🌙 Good night!");
-    }
+## Environment Variables
 
-    if (text === "thanks" || text === "thank you") {
-      return ctx.reply("😊 You're welcome!");
-    }
+BOT_TOKEN=your_telegram_bot_token
 
-    if (text === "bye") {
-      return ctx.reply("👋 Bye!");
-    }
-  });
-}
+BOT_NAME=DEMON-TG-BOT
 
-module.exports = setupAutoReply;
+AUTO_REPLY=true
+
+OWNER_ID=
+
+## Local Run
+
+npm install
+
+npm start
+
+## Render
+
+Build Command:
+
+npm install
+
+Start Command:
+
+npm start
